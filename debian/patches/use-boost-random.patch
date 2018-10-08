@@ -1,0 +1,11 @@
+Index: BUILD/Libraries/HostUtils/HostUtils.pri
+===================================================================
+--- BUILD.orig/Libraries/HostUtils/HostUtils.pri
++++ BUILD/Libraries/HostUtils/HostUtils.pri
+@@ -32,5 +32,5 @@ win32: LIBS += -lAdvapi32 -lNetapi32 -lS
+ linux-* {
+ 	PCS_API = $$PWD/../../../External/PCS/api
+ 	INCLUDEPATH *= $$PCS_API
+-	LIBS += -ldl -lboost_random-mt
++	LIBS += -ldl -lboost_random
+ }

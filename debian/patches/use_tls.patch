@@ -1,0 +1,22 @@
+Index: BUILD/Libraries/IOService/src/IOCommunication/Socket/SslHelper.cpp
+===================================================================
+--- BUILD.orig/Libraries/IOService/src/IOCommunication/Socket/SslHelper.cpp
++++ BUILD/Libraries/IOService/src/IOCommunication/Socket/SslHelper.cpp
+@@ -190,7 +190,7 @@ bool SSLHelper::InitSSLContext(const IOC
+ 
+ 	// Create client context
+ 	{
+-		s_clientSSLCtx = SSL_CTX_new( SSLv3_client_method() );
++		s_clientSSLCtx = SSL_CTX_new( TLSv1_2_client_method() );
+ 		if ( ! s_clientSSLCtx ) {
+ 			ERR_error_string_n( ERR_get_error(), errBuff, ErrBuffSize );
+ 			WRITE_TRACE(DBG_FATAL,
+@@ -211,7 +211,7 @@ bool SSLHelper::InitSSLContext(const IOC
+ 
+ 	// Create server context
+ 	{
+-		s_serverSSLCtx = SSL_CTX_new( SSLv3_server_method() );
++		s_serverSSLCtx = SSL_CTX_new( TLSv1_2_server_method() );
+ 		if ( ! s_serverSSLCtx ) {
+ 			ERR_error_string_n( ERR_get_error(), errBuff, ErrBuffSize );
+ 			WRITE_TRACE(DBG_FATAL,

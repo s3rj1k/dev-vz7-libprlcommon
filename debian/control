@@ -1,0 +1,27 @@
+Source: libprlcommon
+Section: libs
+Priority: optional
+Maintainer: s3rj1k <evasive.gyron@gmail.com>
+Build-Depends: debhelper (>= 9), libqt4-dev, libboost-dev, libarchive-dev, libssl1.0-dev, libboost-all-dev, pkg-config
+Standards-Version: 3.9.6
+
+Package: libprlcommon-dev
+Section: libdevel
+Architecture: amd64
+Depends: libprlcommon7 (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
+Description: prlcommon API development library
+ Virtuozzo Common Libraries is a set of libraries used in other Virtuozzo
+ components providing common functionality for them.
+ .
+ This package contains headers of common API library for Virtuozzo components.
+
+Package: libprlcommon7
+Architecture: amd64
+Multi-Arch: same
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${misc:Depends}
+Pre-Depends: ${misc:Pre-Depends}
+Description: prlcommon API library
+ Virtuozzo Common Libraries is a set of libraries used in other Virtuozzo
+ components providing common functionality for them.
+ .
+ This package contains the common API library for Virtuozzo components.

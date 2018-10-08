@@ -1,0 +1,4 @@
+qmake.patch
+use_tls.patch
+use-boost-random.patch
+force_sdk_headers_path.patch

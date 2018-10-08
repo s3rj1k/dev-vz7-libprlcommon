@@ -1,0 +1,4 @@
+# ignore changelog bug, not debian upstream package
+libprlcommon7: new-package-should-close-itp-bug
+# using openssl
+libprlcommon7: possible-gpl-code-linked-with-openssl

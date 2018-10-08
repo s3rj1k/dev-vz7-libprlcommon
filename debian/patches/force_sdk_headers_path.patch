@@ -1,0 +1,13 @@
+Index: BUILD/common.pri
+===================================================================
+--- BUILD.orig/common.pri
++++ BUILD/common.pri
+@@ -262,7 +262,7 @@ unix {
+ }
+ 
+ SDK_HEADERS = $$(SDK_HEADERS)
+-isEmpty(SDK_HEADERS): SDK_HEADERS = /usr/include
++isEmpty(SDK_HEADERS): SDK_HEADERS = $$SRC_LEVEL/SDK/Sources
+ 
+ !exists($$SDK_HEADERS/prlsdk) {
+ 	error(There is no Vz SDK headers at $$SDK_HEADERS! \

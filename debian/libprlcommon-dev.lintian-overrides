@@ -1,0 +1,2 @@
+# ignore changelog bug, not debian upstream package
+libprlcommon-dev: new-package-should-close-itp-bug
