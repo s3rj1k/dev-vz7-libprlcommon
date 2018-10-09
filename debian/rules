@@ -14,5 +14,5 @@ override_dh_auto_install:
 
 	# libprlcommon7
 	mkdir -p debian/libprlcommon7/usr/lib/${DEB_HOST_MULTIARCH}
-	install -m 644 -p debian/tmp/usr/lib64/libprlcommon.so.7.0.* debian/libprlcommon7/usr/lib/${DEB_HOST_MULTIARCH}
 	find debian/tmp/usr/lib64/ -type l -exec mv {} debian/libprlcommon7/usr/lib/${DEB_HOST_MULTIARCH} \;
+	install -m 755 -p debian/tmp/usr/lib64/libprlcommon.so.7.0.* debian/libprlcommon7/usr/lib/${DEB_HOST_MULTIARCH}
